@@ -141,6 +141,8 @@ function previewTemplatesForOneAsset(id){
                 html320x480 = portraitfromlandscapebottom.replace("$text",text).replace("$image",imageurl).replace("$image",imageurl).replace("$iconurl",logourl);
                 html480x320 = landscapebottom.replace("$text",text).replace("$image",imageurl).replace("$image",imageurl).replace("$iconurl",logourl);
                 break;
+            case "0":
+                    return;
         }
 
                 portraitHtml[i] = html320x480;
@@ -154,7 +156,6 @@ function previewTemplatesForOneAsset(id){
 //        var modal='<div id="id'+id+'" class="modal"><div class="modal-content1 animate"><div class="imgcontainer"><y id="feedthanksa"><h4>Click on the template to select </h4></y></div><div class="containery" style="padding:10px;"><button type="button" style="border-radius:20px" onclick="closeModal('+id+')" class="cancelbtn">Cancel</button> </div><x id="Bottom" style="margin: auto;width:100%;" onclick="pickTemplate(this.id,'+id+')">'+html320x480+'</x><br><br><x id="Top" style="margin: auto;" onclick="pickTemplate(this.id,'+id+')">'+html480x320+'</x><br><br> <x id="Center" style="margin: auto;" onclick="pickTemplate(this.id,'+id+')">'+html3hack+'</x><br><br>  </div>';
 //        var modal = '<div id="id'+id+'" class="modal"> <div class="modal-content1 animate"> <div class="containery" style="padding:10px;"><button type="button" style="border-radius:20px" onclick="closeModal('+id+')" class="cancelbtn">X</button> </div> <div id="Bottom" style="margin: auto;width:100%;">'+html320x480+'</div><br><br> <div id="Top" style="margin: auto;">'+html480x320+'</div></div>';
         var modal = '<div id="id'+id+'" class="modal"> <div class="modal-content1 animate"> <div class="containery" style="padding:10px;"><button type="button" style="border-radius:20px" onclick="closeModal('+id+')" class="cancelbtn">X</button> </div> <table style="    margin-left: 50px;"><tr><td>'+html320x480+'</td><td>'+html480x320+'</td></tr></table></div>';
-
         $("body").append(modal);
         document.getElementById('id'+id).style.display='block';
     }

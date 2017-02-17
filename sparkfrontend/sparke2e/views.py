@@ -72,7 +72,7 @@ def generate_video(request):
 
         # json_data = json.dumps(data)
         headers = {'content-type': 'application/json'}
-        url = 'http://localhost:9099/Spark/api/getVideoFile'
+        url = 'http://localhost:9099/Spark/api/getVideoFiles'
 
         response = requests.post(url, data=finalInput, headers=headers)
 

@@ -17,16 +17,17 @@
     <fieldset>
         <legend><span class="number">-</span> Creative Info </legend>
         <label >Campaign Name :</label>
-            <input type="text" name="fieldxa" id="campaignname" placeholder="Campaign Name *" value="Test">
+            <input type="text" name="fieldxa" id="campaignname" placeholder="Campaign Name *" value="Campaign">
         <br><br><br>
         <label >Asset(s) :</label>
             <div class="inputassets">
-                <input type="text" name="field1a" id="image1" placeholder="Image Url 1" value="http://localhost:8000/static/images/landscape.jpg">
+                <input type="text" name="field1a" id="image1" placeholder="Image Url 1" onfocusout="preview(this.id)" value="http://localhost:8000/static/images/landscape.jpg">
+
                 <input type="text" name="field1b" id="text1" placeholder="Text 1" value="hello world">
                 <input type="text" name="field1c" id="weight1" placeholder="Weight (in %)" value="100">
-                <div id="template1"></div>
+                <select id="positionid1"> <option id="0">Text Position</option> <option id="1">Top</option> <option id="2">Center</option> <option id="3">Bottom</option> </select>
                 <button class="buttonx" onclick="previewTemplatesForOneAsset(this.id)" id="1" type="submit" ><span>
-                    <y id="btnlbla">Pick Template</y></span></button>
+                    <y id="btnlbla">Preview</y></span></button>
             </div>
         <br>
         <img style="width:30px;" src="{% static 'images/add.png' %}" id="add">
@@ -42,15 +43,24 @@
     </fieldset>
 </div>
 </div>
-<div class="container2" >
+<div class="container2">
     <div class="form-style-5">
         <video width="470" height="480" controls>
-            <source src="Test.mp4" type="video/mp4">
+            <source src="{% static 'video/outputjava8thfeb.mp4' %}" type="video/mp4" id="video1">
             <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video>
         <input style="margin-top:100px;" type="submit" onclick="previewTemplates()" value="Provide Video URL" />
     </div>
+
+    <!--<div class="form-style-5">-->
+        <!--<video width="470" height="480" controls>-->
+            <!--<source src="{% static 'video/outputjava8thfeb.mp4' %}" type="video/mp4" id="video2">-->
+            <!--<source src="movie.ogg" type="video/ogg">-->
+            <!--Your browser does not support the video tag.-->
+        <!--</video>-->
+        <!--<input style="margin-top:100px;" type="submit" onclick="previewTemplates()" value="Provide Video URL" />-->
+    <!--</div>-->
 </div>
 </div>
 </body>

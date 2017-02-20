@@ -150,10 +150,13 @@
 
 .modal-content1 {
     background-color: #F5F5DC;
-    margin: -3.5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    /* margin: -3.5% auto 15% auto; */
     border: 1px solid #888;
-    width: 40%; /* Could be more or les, depending on screen size */
+    width: 70%;
     background-color: lightyellow;
+    margin: 0 auto;
+    padding: 20px;
+    height: 550px;
 }
 .imgcontainer {
     text-align: center;
@@ -186,6 +189,7 @@
         width: 100%;
     }
 }
+
 /* Extra styles for the cancel button */
 .cancelbtn {
     margin: 5px 5px 1px 1px;
